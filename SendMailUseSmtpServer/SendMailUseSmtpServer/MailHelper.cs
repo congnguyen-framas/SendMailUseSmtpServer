@@ -41,7 +41,9 @@ namespace SendMailUseSmtpServer
                 smtp = new SmtpClient();
                 message.From = FromMailAddress;
                 message.To.Add(ToMailAddress);
-                //message.CC.Add(CCMailAddress);
+
+                if (!string.IsNullOrEmpty(CCMailAddress))
+                    message.CC.Add(CCMailAddress);
                 message.Subject = Subject;
                 message.IsBodyHtml = isBodyHtml;
                 message.Body = Body;

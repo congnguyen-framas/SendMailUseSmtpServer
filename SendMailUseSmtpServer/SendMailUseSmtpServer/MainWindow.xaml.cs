@@ -30,9 +30,11 @@ namespace SendMailUseSmtpServer
             #region khởi tạo đối tượng sendEmail
             mailHelper = new MailHelper()
             {
-                FromMailAddress = new MailAddress("fvn-itsupport@framas.com"),
+                //noreplyfvn@framas.com
+                //(!n-510E:/Z223E/
+                FromMailAddress = new MailAddress("noreplyfvn@framas.com"),
                 Host = "smtp.office365.com",
-                Password = "fvnIT23!",
+                Password = "(!n-510E:/Z223E",
                 Port = "587",
 
                 //ToMailAddress = "cong.nguyen@framas.com",
