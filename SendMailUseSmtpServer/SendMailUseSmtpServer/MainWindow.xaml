@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:SendMailUseSmtpServer"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <StackPanel Orientation="Vertical">
         <Label x:Name="labStatus" Content="status" FontSize="30"/>
-    </Grid>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="To email" FontSize="30" Width="150"/>
+            <TextBox x:Name="txtToEmail" FontSize="30" Width="600" Text="cong.nguyen@framas.com"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="CC email" FontSize="30" Width="150"/>
+            <TextBox x:Name="txtCCEmail" FontSize="30" Width="600" Text="phucthinh.automations@gmail.com"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Subject" FontSize="30" Width="150"/>
+            <TextBox x:Name="txtSubject" FontSize="30" Width="600" Text="Test send notification"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Body" FontSize="30" Width="150"/>
+            <TextBox x:Name="txtBody" FontSize="30" Width="600" Text="Truck pack test."/>
+        </StackPanel>
+        <Button x:Name="btnSend" FontSize="30" Content="Send" Click="btnSend_Click"/>
+
+    </StackPanel>
 </Window>
